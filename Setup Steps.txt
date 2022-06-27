@@ -1,0 +1,32 @@
+Week 4 : Ocean APIs
+
+Setup:
+Install node:
+https://nodejs.org/en/download/
+
+Install Docker:
+https://docs.docker.com/engine/install/
+
+
+Ocean:
+git clone https://github.com/oceanprotocol/ocean.js
+git clone https://github.com/oceanprotocol/barge
+
+
+Open docker app
+cd barge
+./start_ocean.sh --with-provider2 --no-dashboard
+
+
+Open a new terminal and export the smart contract address setting for ocean:
+export ADDRESS_FILE="${HOME}/.ocean/ocean-contracts/artifacts/address.json"
+
+Go to ocean.js folder and run:
+npm install
+npm install @oceanprotocol/lib
+
+build the metadata:
+npm run build:metadata
+
+
+Check the package.json file in the ocean.js repo for build:metadata script to understand more.
